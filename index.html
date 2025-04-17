@@ -2,42 +2,114 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kasir Café</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Sistem Barang - Pupuk Indonesia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f5;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #2e7d32;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 22px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 15px;
+      margin: 6px 0;
+      border-radius: 10px;
+      transition: background 0.3s;
+      font-weight: 500;
+    }
+
+    .sidebar a:hover {
+      background: #388e3c;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 25px 0 0 25px;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .card {
+      background: #f3f3f3;
+      border-left: 8px solid #795548;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+  </style>
 </head>
 <body>
 
-  <h1>Kasir Café</h1>
+  <div class="sidebar">
+    <h2>Pupuk Indonesia</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Data Barang Masuk</a>
+    <a href="#">Data Barang Keluar</a>
+    <a href="#">Stok Gudang</a>
+    <a href="#">Laporan</a>
+    <a href="#">Pengaturan</a>
+  </div>
 
-  <h3>Menu</h3>
-  <select id="menuItem">
-    <option value="Kopi Hitam-15000">Kopi Hitam - Rp15.000</option>
-    <option value="Cappuccino-20000">Cappuccino - Rp20.000</option>
-    <option value="Latte-22000">Latte - Rp22.000</option>
-    <option value="Teh Manis-10000">Teh Manis - Rp10.000</option>
-    <option value="Roti Bakar-18000">Roti Bakar - Rp18.000</option>
-  </select>
-  <input type="number" id="quantity" placeholder="Jumlah" min="1" value="1">
-  <button class="btn success" onclick="tambahTransaksi()">Tambah</button>
+  <div class="main">
+    <h1>Selamat Datang di Sistem Barang</h1>
 
-  <h3>Daftar Transaksi</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Menu</th>
-        <th>Jumlah</th>
-        <th>Harga</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody id="transaksiBody">
-      <!-- Transaksi akan ditambahkan di sini -->
-    </tbody>
-  </table>
+    <div class="card">
+      <h3>Barang Masuk Hari Ini</h3>
+      <p>Urea - 200 kg | NPK - 150 kg | ZA - 100 kg</p>
+    </div>
 
-  <h3>Total Pemasukan: Rp <span id="totalPemasukan">0</span></h3>
+    <div class="card">
+      <h3>Barang Keluar Hari Ini</h3>
+      <p>Urea - 120 kg | NPK - 100 kg</p>
+    </div>
 
-  <script src="js/app.js"></script>
+    <div class="card">
+      <h3>Stok Tersisa</h3>
+      <p>Urea: 800 kg | NPK: 900 kg | ZA: 600 kg</p>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Pupuk Indonesia - Sistem Gudang Barang
+    </div>
+  </div>
+
 </body>
 </html>
